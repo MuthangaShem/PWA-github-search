@@ -11,7 +11,7 @@ import { SearchService } from './../services/search.service';
 })
 export class HomeComponent implements OnInit {
 
-  displayedColumns = ['name', 'full_name', 'owner', 'language', 'created_at', 'updated_at', 'watchers_count', 'forks_count', 'license', 'html_url']
+  displayedColumns = ['name', 'owner', 'language', 'created_at', 'updated_at', 'open_issues', 'watchers_count', 'forks_count', 'size', 'license', 'html_url']
   dataSource: Item[] = [];
   searchTerm: string = ''
 

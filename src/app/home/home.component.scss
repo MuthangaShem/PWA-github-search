@@ -52,6 +52,23 @@ td.mat-column-position {
   border-right: 1px solid #e0e0e0;
 }
 
+.owner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+mat-header-cell,
+mat-cell {
+  justify-content: left !important;
+  text-align: left !important;
+}
+
 @include mat-table-columns(
   (
     name: (
@@ -83,6 +100,15 @@ td.mat-column-position {
       width: 10rem,
     ),
     star: (
+      width: 5rem,
+    ),
+    html_url: (
+      width: 5rem,
+    ),
+    size: (
+      width: 5rem,
+    ),
+    open_issues: (
       width: 5rem,
     ),
   )
