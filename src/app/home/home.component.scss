@@ -1,0 +1,89 @@
+@mixin mat-table-columns($columns) {
+  .mat-column- {
+    @each $colName, $props in $columns {
+      $width: map-get($props, "width");
+
+      &#{$colName} {
+        flex: $width;
+        min-width: $width;
+
+        @if map-has-key($props, "color") {
+          color: map-get($props, "color");
+        }
+      }
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.example-container {
+  height: 80vh;
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+}
+
+table {
+  width: 800px;
+}
+
+td.mat-column-star {
+  width: 20px;
+  padding-right: 8px;
+}
+
+th.mat-column-position,
+td.mat-column-position {
+  padding-left: 8px;
+}
+
+.mat-table-sticky-border-elem-right {
+  border-left: 1px solid #e0e0e0;
+}
+
+.mat-table-sticky-border-elem-left {
+  border-right: 1px solid #e0e0e0;
+}
+
+@include mat-table-columns(
+  (
+    name: (
+      width: 6rem,
+      color: gray,
+    ),
+    full_name: (
+      width: 10rem,
+    ),
+    owner: (
+      width: 10rem,
+    ),
+    language: (
+      width: 10rem,
+    ),
+    created_at: (
+      width: 10rem,
+    ),
+    updated_at: (
+      width: 10rem,
+    ),
+    watchers_count: (
+      width: 5rem,
+    ),
+    forks_count: (
+      width: 5rem,
+    ),
+    license: (
+      width: 10rem,
+    ),
+    star: (
+      width: 5rem,
+    ),
+  )
+);

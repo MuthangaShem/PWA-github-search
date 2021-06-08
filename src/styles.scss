@@ -1,4 +1,3 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '~@angular/material' as mat;
@@ -20,13 +19,15 @@ $PWA-example-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$PWA-example-theme: mat.define-light-theme((
-  color: (
-    primary: $PWA-example-primary,
-    accent: $PWA-example-accent,
-    warn: $PWA-example-warn,
+$PWA-example-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $PWA-example-primary,
+      accent: $PWA-example-accent,
+      warn: $PWA-example-warn,
+    ),
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -35,5 +36,51 @@ $PWA-example-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// SPACING
+@function nested-view-padding($device) {
+  @if $device == "phone" {
+    @return 70px 15px 0 15px;
+  } @else if $device == "tablet-potrait" {
+    @return 60px 25px 0 25px;
+  } @else if $device == "tablet-landscape" {
+    @return 60px 25px 0 25px;
+  } @else if $device == "desktop" {
+    @return 60px 85px 0 85px;
+  } @else if $device == "big-desktop" {
+    @return 90px 85px 0 85px;
+  }
+}
+
+// MEDIA BREAKPOINTS
+$phone-only: 599px;
+$tablet-portrait-up: 899px;
+$tablet-landscape-up: 1119px;
+$desktop-up: 1200px;
+$big-desktop-up: 1800px;
+
+body {
+  height: 100vh;
+  padding: nested-view-padding("desktop");
+
+  @media (max-width: $phone-only) {
+    padding: nested-view-padding("phone") !important;
+  }
+  @media (max-width: $tablet-landscape-up) {
+    padding: nested-view-padding("tablet-landscape");
+  }
+  @media (max-width: $tablet-portrait-up) {
+    padding: nested-view-padding("tablet-potrait");
+  }
+  @media (min-width: $big-desktop-up) {
+    padding: nested-view-padding("big-desktop") !important;
+  }
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -1,9 +1,13 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ServiceWorkerModule } from '@angular/service-worker';
+import { ServiceWorkerModule, SwUpdate } from '@angular/service-worker';
+import { Observable } from 'rxjs';
 import { environment } from '../environments/environment';
 import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -20,10 +24,13 @@ import { SearchComponent } from './search/search.component';
     AboutComponent
   ],
   imports: [
+    MatTableModule,
+    MatIconModule,
     MatInputModule,
+    AppRoutingModule,
     MatFormFieldModule,
     BrowserModule,
-    AppRoutingModule,
+    HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
@@ -35,4 +42,19 @@ import { SearchComponent } from './search/search.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  updateAvailable!: Observable<any>;
+  constructor(private update: SwUpdate) {
+    if (update.isEnabled) {
+      this.updateAvailable = update.available
+      this.updateAvailable.subscribe(() => this.loadConfirmation())
+    }
+  }
+
+  private loadConfirmation() {
+    if (confirm('New version available. Load New Version?')) {
+
+      window.location.reload();
+    }
+  }
+}
