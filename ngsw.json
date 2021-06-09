@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1623191948694,
+  "timestamp": 1623236145846,
   "index": "/PWA-github-search/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "/PWA-github-search/favicon.ico",
         "/PWA-github-search/index.html",
-        "/PWA-github-search/main.47fa47645315f9277cda.js",
+        "/PWA-github-search/main.aab4813c136f57cc69d5.js",
         "/PWA-github-search/manifest.webmanifest",
         "/PWA-github-search/polyfills.7884ff38eecb1adfb71c.js",
         "/PWA-github-search/runtime.6a9fe6260be38d81523d.js",
-        "/PWA-github-search/styles.ca85515bbe23af167a64.css"
+        "/PWA-github-search/styles.bef4dee8786819e1567b.css"
       ],
       "patterns": []
     },
@@ -29,35 +29,27 @@
         "ignoreVary": true
       },
       "urls": [
-        "/PWA-github-search/assets/icons/icon-128x128.png",
-        "/PWA-github-search/assets/icons/icon-144x144.png",
-        "/PWA-github-search/assets/icons/icon-152x152.png",
         "/PWA-github-search/assets/icons/icon-192x192.png",
+        "/PWA-github-search/assets/icons/icon-256x256.png",
         "/PWA-github-search/assets/icons/icon-384x384.png",
-        "/PWA-github-search/assets/icons/icon-512x512.png",
-        "/PWA-github-search/assets/icons/icon-72x72.png",
-        "/PWA-github-search/assets/icons/icon-96x96.png"
+        "/PWA-github-search/assets/icons/icon-512x512.png"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/PWA-github-search/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
-    "/PWA-github-search/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
-    "/PWA-github-search/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
-    "/PWA-github-search/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
-    "/PWA-github-search/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
-    "/PWA-github-search/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
-    "/PWA-github-search/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
-    "/PWA-github-search/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/PWA-github-search/assets/icons/icon-192x192.png": "3b24caf2ddec026deee7d0457aad6f10052593a9",
+    "/PWA-github-search/assets/icons/icon-256x256.png": "c197aecc73621e9fbd058c82ac13d5c9b7e997b0",
+    "/PWA-github-search/assets/icons/icon-384x384.png": "abe460ddbad3fc680a88c829a501b8d3ee513b86",
+    "/PWA-github-search/assets/icons/icon-512x512.png": "18a5a72822669b58f949e62d4baa42bfe00e7d6a",
     "/PWA-github-search/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/PWA-github-search/index.html": "433043a2c892fbae325034ddee2f0407da31d917",
-    "/PWA-github-search/main.47fa47645315f9277cda.js": "fa46bcdcd654b3066b16c637251af5f2f87360a3",
-    "/PWA-github-search/manifest.webmanifest": "f3626f5648e94879848e534282af319e3e359f06",
+    "/PWA-github-search/index.html": "2cf81846af4c5a29c5f50202228e631ac9f8768e",
+    "/PWA-github-search/main.aab4813c136f57cc69d5.js": "d03dc2ef6c0048f41d2a820ab8dd235099527804",
+    "/PWA-github-search/manifest.webmanifest": "85b11036f9a37838551d14726ab61c30889f1448",
     "/PWA-github-search/polyfills.7884ff38eecb1adfb71c.js": "09c14278fb3caccd48de70ce2bb5ab28064c6510",
     "/PWA-github-search/runtime.6a9fe6260be38d81523d.js": "d015274ff94da56c8f73e9c9241138e1c3e49258",
-    "/PWA-github-search/styles.ca85515bbe23af167a64.css": "ef97509c44cdb3b57647ace7e3c5fefba7d715c5"
+    "/PWA-github-search/styles.bef4dee8786819e1567b.css": "002d127d6da687c79d8359b4a6cbe3c53a0bd904"
   },
   "navigationUrls": [
     {
