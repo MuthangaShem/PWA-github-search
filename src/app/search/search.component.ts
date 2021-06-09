@@ -20,6 +20,7 @@ export class SearchComponent implements OnInit {
   }
 
   ngAfterViewInit() {
+    this.input.nativeElement.focus();
   }
 
   searchMethod() {

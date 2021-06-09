@@ -37,9 +37,12 @@ mat-spinner {
 
 .example-container {
   max-height: 80vh;
-  width: 100%;
+
   max-width: 100%;
   overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 table {
