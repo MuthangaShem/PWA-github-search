@@ -1,0 +1,16 @@
+mat-form-field {
+  width: 50%;
+
+  @media (max-width: 599px) {
+    width: 100%;
+  }
+  @media (max-width: 1119px) {
+    width: 80%;
+  }
+  @media (max-width: 899px) {
+    width: 100%;
+  }
+  @media (min-width: 1800px) {
+    width: 70%;
+  }
+}

@@ -1,1 +1,17 @@
 <router-outlet></router-outlet>
+<!-- *ngIf="showInstallMessage"  -->
+<div *ngIf="showInstallMessage" class="install">
+  <span> Install to Homescreen?</span>
+  <div class="buttons">
+    <button mat-raised-button color="primary" (click)="addToHomeScreen()">
+      Ok
+    </button>
+    <button
+      mat-raised-button
+      color="accent"
+      (click)="showInstallMessage = false"
+    >
+      Maybe Later
+    </button>
+  </div>
+</div>

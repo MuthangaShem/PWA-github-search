@@ -8,6 +8,8 @@ import { Component, HostListener } from '@angular/core';
 export class AppComponent {
   title = 'PWA-example';
 
+  showInstallMessage: boolean = false;
+
   deferredPrompt: any;
   showButton = false;
 
@@ -19,11 +21,20 @@ export class AppComponent {
     // Stash the event so it can be triggered later.
     this.deferredPrompt = e;
     this.showButton = true;
+    setTimeout(() => {
+
+      this.openInstallModal();
+    }, 5000);
+  }
+
+  openInstallModal() {
+    console.log('install modal opened',);
+    this.showInstallMessage = true;
   }
 
   addToHomeScreen() {
     // hide our user interface that shows our A2HS button
-    this.showButton = false;
+    this.showInstallMessage = false;
     // Show the prompt
     this.deferredPrompt.prompt();
     // Wait for the user to respond to the prompt

@@ -15,6 +15,18 @@
   }
 }
 
+app-search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+mat-spinner {
+  position: absolute;
+  top: 50%;
+}
+
 .container {
   width: 100%;
   display: flex;
@@ -24,7 +36,7 @@
 }
 
 .example-container {
-  height: 80vh;
+  max-height: 80vh;
   width: 100%;
   max-width: 100%;
   overflow: auto;
@@ -65,15 +77,14 @@ td.mat-column-position {
 
 mat-header-cell,
 mat-cell {
-  justify-content: left !important;
-  text-align: left !important;
+  justify-content: right !important;
+  text-align: right !important;
 }
 
 @include mat-table-columns(
   (
     name: (
       width: 6rem,
-      color: gray,
     ),
     full_name: (
       width: 10rem,
@@ -103,7 +114,7 @@ mat-cell {
       width: 5rem,
     ),
     html_url: (
-      width: 5rem,
+      width: 3%,
     ),
     size: (
       width: 5rem,

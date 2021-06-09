@@ -39,7 +39,7 @@ $PWA-example-theme: mat.define-light-theme(
 // SPACING
 @function nested-view-padding($device) {
   @if $device == "phone" {
-    @return 70px 15px 0 15px;
+    @return 60px 15px 0 15px;
   } @else if $device == "tablet-potrait" {
     @return 60px 25px 0 25px;
   } @else if $device == "tablet-landscape" {
@@ -61,6 +61,7 @@ $big-desktop-up: 1800px;
 body {
   height: 100vh;
   padding: nested-view-padding("desktop");
+  background: aliceblue;
 
   @media (max-width: $phone-only) {
     padding: nested-view-padding("phone") !important;

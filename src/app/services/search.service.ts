@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { from, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +15,7 @@ export class SearchService {
   constructor(private _http: HttpClient) { }
 
   searchRepos(reponame: string): Observable<any> {
-    return this._http.get('https://api.github.com/search/repositories?q=' + reponame)
+    return reponame ? this._http.get('https://api.github.com/search/repositories?q=' + reponame + '&per_page=100') : from([])
   }
 
 }
